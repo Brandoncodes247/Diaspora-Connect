@@ -23,6 +23,27 @@
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" required>
 
+            <div class="contact-method-group">
+                <span class="contact-method-label">How would you like us to contact you?</span>
+                <div class="radio-options">
+                    <label class="radio-option">
+                        <input type="radio" name="contact_method" value="Email" required>
+                        <span class="custom-radio"></span>
+                        Email
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="contact_method" value="Phone" required>
+                        <span class="custom-radio"></span>
+                        Phone
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="contact_method" value="Either" required>
+                        <span class="custom-radio"></span>
+                        Either
+                    </label>
+                </div>
+            </div>
+
             <label for="details">Arrival/Departure Details</label>
             <input type="text" id="details" name="details" placeholder="e.g. JKIA, July 1, 10:00am" required>
 
@@ -39,19 +60,34 @@
         <p>&copy; 2025 Diaspora Connect. All rights reserved.</p>
     </footer>
     <script>
-    document.getElementById('airportTransferForm').addEventListener('submit', function(e) {
+    document.getElementById('airportTransferForm').addEventListener('submit', async function(e) {
         e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const details = document.getElementById('details').value;
-        const passengers = document.getElementById('passengers').value;
-        const description = document.getElementById('description').value;
-        const subject = encodeURIComponent('Airport Transfer Request from ' + name);
-        const body = encodeURIComponent(
-            `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nArrival/Departure: ${details}\nPassengers: ${passengers}\nDetails: ${description}`
-        );
-        window.location.href = `mailto:diasporaconnect@example.com?subject=${subject}&body=${body}`;
+        const form = e.target;
+        const thankYou = document.getElementById('thankYouMsg');
+        const data = new FormData(form);
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                form.style.display = 'none';
+                thankYou.style.display = 'block';
+            } else {
+                const errorMsg = document.createElement('div');
+                errorMsg.textContent = 'Sorry, there was a problem sending your request. Please try again.';
+                errorMsg.style.color = '#d32f2f';
+                errorMsg.style.marginTop = '1rem';
+                form.appendChild(errorMsg);
+            }
+        } catch (err) {
+            const errorMsg = document.createElement('div');
+            errorMsg.textContent = 'Network error. Please check your connection and try again.';
+            errorMsg.style.color = '#d32f2f';
+            errorMsg.style.marginTop = '1rem';
+            form.appendChild(errorMsg);
+        }
     });
     </script>
 </body>
