@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Legal Assistance | Diaspora Connect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <img src="../SS2.png" alt="Diaspora Connect Company Logo" height="44" style="display:block;margin:0 auto 0.5rem auto;">
+        <h1>Request Legal Assistance</h1>
+    </header>
+    <main>
+        <form class="service-form" id="legalForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="type">Type of Legal Help</label>
+            <input type="text" id="type" name="type" placeholder="e.g. Land, Business, Family" required>
+
+            <label for="description">Describe Your Needs</label>
+            <textarea id="description" name="description" rows="4" placeholder="Describe your needs..."></textarea>
+
+            <button type="submit" class="service-btn">Send Request</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Diaspora Connect. All rights reserved.</p>
+    </footer>
+    <script>
+    document.getElementById('legalForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const type = document.getElementById('type').value;
+        const description = document.getElementById('description').value;
+        const subject = encodeURIComponent('Legal Assistance Request from ' + name);
+        const body = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nType of Legal Help: ${type}\nDetails: ${description}`
+        );
+        window.location.href = `mailto:diasporaconnect@example.com?subject=${subject}&body=${body}`;
+    });
+    </script>
+</body>
+</html> 
