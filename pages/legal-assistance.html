@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Request Details | Diaspora Connect</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="form.css">
+    <title>Request Legal Assistance | Diaspora Connect</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/form.css">
 </head>
 <body>
     <header>
-        <img src="../SS2.png" alt="Diaspora Connect Company Logo" height="44" style="display:block;margin:0 auto 0.5rem auto;">
-        <h1>Service Request Details</h1>
+        <img src="/assets/SS2.png" alt="Diaspora Connect Company Logo" height="44" style="display:block;margin:0 auto 0.5rem auto;">
+        <h1>Request Legal Assistance</h1>
     </header>
     <main>
         <section class="service-briefing" style="max-width:480px;margin:2.5rem auto 1.2rem auto;padding:1.2rem 1.2rem 1rem 1.2rem;background:#f7f9fa;border-radius:14px;box-shadow:0 2px 12px rgba(42,16,85,0.07);color:#2b1055;font-size:1.08rem;">
-            <h2 style="font-size:1.25rem;margin-bottom:0.5rem;color:#00695c;">Service Request Briefing</h2>
+            <h2 style="font-size:1.25rem;margin-bottom:0.5rem;color:#00695c;">Legal Assistance Briefing</h2>
             <ul style="margin:0 0 0.5rem 1.2rem;padding:0;">
-                <li>Request any service offered by Diaspora Connect, including legal, consular, document, or other support.</li>
-                <li>Specify the type of service, provide all relevant details, and mention urgency or deadlines.</li>
-                <li>Tips: Be specific, attach documents if needed, and mention any preferences or special instructions.</li>
+                <li>Get help with land, inheritance, contracts, immigration, and more.</li>
+                <li>Specify the type of legal help, urgency, and attach any relevant documents.</li>
+                <li>Tips: Clearly describe your issue, provide all necessary details, and mention any deadlines.</li>
             </ul>
         </section>
-        <form class="service-form" id="detailsForm" action="https://formspree.io/f/xjkrpvbd" method="POST" enctype="multipart/form-data">
-            <p style="margin-bottom:1.2rem;">Please fill in your contact details and describe your request. We will reach out to you in a few minutes.</p>
+        <form class="service-form" id="legalForm">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required>
 
@@ -32,26 +31,24 @@
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" required>
 
-            <label for="message">How can we help you?</label>
-            <textarea id="message" name="message" rows="4" placeholder="Describe your needs or the service you want..."></textarea>
+            <label for="type">Type of Legal Help</label>
+            <input type="text" id="type" name="type" placeholder="e.g. Land, Business, Family" required>
+
+            <label for="description">Describe Your Needs</label>
+            <textarea id="description" name="description" rows="4" placeholder="Describe your needs..."></textarea>
 
             <button type="submit" class="service-btn">Send Request</button>
         </form>
-        <div id="thankYouMsg" class="thankyou-card" style="display:none;">
-            <img src="../SS5.png" alt="Diaspora Connect Logo" style="display:block;margin:0 auto 2rem auto;max-width:180px;width:40vw;">
-            <h2 style="font-size:2.2rem;color:#2b1055;font-weight:900;margin-bottom:1.2rem;">Thank you for your request!</h2>
-            <p style="font-size:1.25rem;color:#00695c;font-weight:600;">We have received your details and will reach out to you in a few minutes.</p>
-        </div>
     </main>
     <footer>
         <p>&copy; 2025 Diaspora Connect. All rights reserved.</p>
     </footer>
     <script>
-    document.getElementById('detailsForm').addEventListener('submit', async function(e) {
+    document.getElementById('legalForm').addEventListener('submit', async function(e) {
         e.preventDefault();
         const form = e.target;
-        const data = new FormData(form);
         const thankYou = document.getElementById('thankYouMsg');
+        const data = new FormData(form);
         try {
             const response = await fetch(form.action, {
                 method: 'POST',

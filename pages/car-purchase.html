@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Car Hire | Diaspora Connect</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="form.css">
+    <title>Request Car Purchase | Diaspora Connect</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/form.css">
 </head>
 <body>
     <header>
-        <img src="../SS2.png" alt="Diaspora Connect Company Logo" height="44" style="display:block;margin:0 auto 0.5rem auto;">
-        <h1>Request Car Hire</h1>
+        <img src="/assets/SS2.png" alt="Diaspora Connect Company Logo" height="44" style="display:block;margin:0 auto 0.5rem auto;">
+        <h1>Request Car Purchase</h1>
     </header>
     <main>
         <section class="service-briefing" style="max-width:480px;margin:2.5rem auto 1.2rem auto;padding:1.2rem 1.2rem 1rem 1.2rem;background:#f7f9fa;border-radius:14px;box-shadow:0 2px 12px rgba(42,16,85,0.07);color:#2b1055;font-size:1.08rem;">
-            <h2 style="font-size:1.25rem;margin-bottom:0.5rem;color:#00695c;">Car Hire Briefing</h2>
+            <h2 style="font-size:1.25rem;margin-bottom:0.5rem;color:#00695c;">Car Purchase Briefing</h2>
             <ul style="margin:0 0 0.5rem 1.2rem;padding:0;">
-                <li>Hire a car for your stay in Kenya, with a wide selection and flexible terms.</li>
-                <li>Specify the type of car, duration, and pickup/dropoff location.</li>
-                <li>Tips: Be specific about your needs, mention preferred models, and provide accurate dates.</li>
+                <li>Get help purchasing a car in Kenya, for personal or business use.</li>
+                <li>Specify the type of car, budget, and preferred location.</li>
+                <li>Tips: Be specific about your needs, mention preferred models, and attach reference images if any.</li>
             </ul>
         </section>
-        <form class="service-form" id="carHireForm">
+        <form class="service-form" id="carPurchaseForm">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required>
 
@@ -31,11 +31,11 @@
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" required>
 
-            <label for="carType">Car Type</label>
-            <input type="text" id="carType" name="carType" placeholder="e.g. SUV, Sedan, Van" required>
+            <label for="carModel">Car Make/Model</label>
+            <input type="text" id="carModel" name="carModel" placeholder="e.g. Toyota Prado, Honda Fit" required>
 
-            <label for="dates">Rental Dates</label>
-            <input type="text" id="dates" name="dates" placeholder="e.g. July 1 - July 10, 2025" required>
+            <label for="budget">Budget (Ksh/USD)</label>
+            <input type="text" id="budget" name="budget" placeholder="e.g. 2,000,000 Ksh or $15,000" required>
 
             <label for="description">Additional Details</label>
             <textarea id="description" name="description" rows="4" placeholder="Describe your needs..."></textarea>
@@ -47,17 +47,17 @@
         <p>&copy; 2025 Diaspora Connect. All rights reserved.</p>
     </footer>
     <script>
-    document.getElementById('carHireForm').addEventListener('submit', function(e) {
+    document.getElementById('carPurchaseForm').addEventListener('submit', function(e) {
         e.preventDefault();
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
-        const carType = document.getElementById('carType').value;
-        const dates = document.getElementById('dates').value;
+        const carModel = document.getElementById('carModel').value;
+        const budget = document.getElementById('budget').value;
         const description = document.getElementById('description').value;
-        const subject = encodeURIComponent('Car Hire Request from ' + name);
+        const subject = encodeURIComponent('Car Purchase Request from ' + name);
         const body = encodeURIComponent(
-            `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCar Type: ${carType}\nRental Dates: ${dates}\nDetails: ${description}`
+            `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCar Make/Model: ${carModel}\nBudget: ${budget}\nDetails: ${description}`
         );
         window.location.href = `mailto:diasporaconnect@example.com?subject=${subject}&body=${body}`;
     });

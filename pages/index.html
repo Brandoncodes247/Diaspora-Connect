@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diaspora Connect</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
     <style>
         body {
             background: none;
@@ -24,7 +24,7 @@
             position: fixed;
             top: 0; left: 0; width: 100vw; height: 100vh;
             z-index: 0;
-            background: url('../KE_ART_1.png') top center/cover no-repeat;
+            background: url('/assets/KE_ART_1.png') top center/cover no-repeat;
             filter: blur(8px) brightness(0.85) contrast(1.08);
             opacity: 0.55;
         }
@@ -46,7 +46,7 @@
             z-index: 2;
             opacity: 1;
             pointer-events: none;
-            background: url('../KE_ART_3.png') center center/contain no-repeat;
+            background: url('/assets/KE_ART_3.png') center center/contain no-repeat;
         }
         @media (max-width: 700px) {
             .ke-art-float {
@@ -73,7 +73,7 @@
     <header>
         <div class="navbar">
             <div class="logo" style="font-size:2.1rem;">
-                <img src="../SS2.png" alt="Diaspora Connect Company Logo" height="72" style="height:72px;width:auto;">
+                <img src="/assets/SS2.png" alt="Diaspora Connect Company Logo" height="72" style="height:72px;width:auto;">
                 <span style="font-size:2.2rem;">Diaspora Connect</span>
             </div>
             <nav>
@@ -270,7 +270,7 @@
                     <button type="submit" class="newsletter-btn">Subscribe</button>
                 </form>
                 <div id="newsletterThankYou" class="newsletter-thankyou" style="display:none;">
-                    <img src="../SS5.png" alt="Diaspora Connect Logo" style="display:block;margin:0 auto 2rem auto;max-width:180px;width:40vw;">
+                    <img src="/assets/SS5.png" alt="Diaspora Connect Logo" style="display:block;margin:0 auto 2rem auto;max-width:180px;width:40vw;">
                     <h2 style="font-size:2.2rem;color:#2b1055;font-weight:900;margin-bottom:1.2rem;">Thank you for subscribing!</h2>
                     <p style="font-size:1.25rem;color:#00695c;font-weight:600;">You'll receive updates about new services, offers, and news from Diaspora Connect.</p>
                 </div>
@@ -292,7 +292,7 @@
     <footer>
         <p>&copy; 2025 Diaspora Connect. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
     <script>
     document.getElementById('newsletterForm').addEventListener('submit', async function(e) {
         e.preventDefault();

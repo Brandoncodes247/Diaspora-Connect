@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Airport Transfer | Diaspora Connect</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="form.css">
+    <title>Request Assignment Help | Diaspora Connect</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/form.css">
 </head>
 <body>
     <header>
-        <img src="../SS2.png" alt="Diaspora Connect Company Logo" height="44" style="display:block;margin:0 auto 0.5rem auto;">
-        <h1>Request Airport Transfer</h1>
+        <img src="/assets/SS2.png" alt="Diaspora Connect Company Logo" height="44" style="display:block;margin:0 auto 0.5rem auto;">
+        <h1>Request Assignment Help</h1>
     </header>
     <main>
         <section class="service-briefing" style="max-width:480px;margin:2.5rem auto 1.2rem auto;padding:1.2rem 1.2rem 1rem 1.2rem;background:#f7f9fa;border-radius:14px;box-shadow:0 2px 12px rgba(42,16,85,0.07);color:#2b1055;font-size:1.08rem;">
-            <h2 style="font-size:1.25rem;margin-bottom:0.5rem;color:#00695c;">Airport Transfers Briefing</h2>
+            <h2 style="font-size:1.25rem;margin-bottom:0.5rem;color:#00695c;">Assignment Help Briefing</h2>
             <ul style="margin:0 0 0.5rem 1.2rem;padding:0;">
-                <li>Book reliable airport pick-up or drop-off services in Kenya.</li>
-                <li>Specify pickup/dropoff location, date, time, and number of passengers.</li>
-                <li>Tips: Provide flight details, be clear about timing, and mention any special needs.</li>
+                <li>Get help with essays, homework, research, and coursework for any subject or academic level.</li>
+                <li>Specify your subject, topic, and deadline for best results.</li>
+                <li>Tips: Be clear about requirements, attach files if needed, and mention your academic level.</li>
             </ul>
         </section>
-        <form class="service-form" id="airportTransferForm">
+        <form class="service-form" id="assignmentForm" action="https://formspree.io/f/xjkrpvbd" method="POST">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required>
 
@@ -31,23 +31,28 @@
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" required>
 
-            <label for="details">Arrival/Departure Details</label>
-            <input type="text" id="details" name="details" placeholder="e.g. JKIA, July 1, 10:00am" required>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
 
-            <label for="passengers">Number of Passengers</label>
-            <input type="number" id="passengers" name="passengers" min="1" required>
+            <label for="deadline">Deadline</label>
+            <input type="text" id="deadline" name="deadline" placeholder="e.g. July 10, 2025" required>
 
-            <label for="description">Additional Details</label>
-            <textarea id="description" name="description" rows="4" placeholder="Describe your needs..."></textarea>
+            <label for="description">Assignment Details</label>
+            <textarea id="description" name="description" rows="4" placeholder="Describe your assignment..."></textarea>
 
             <button type="submit" class="service-btn">Send Request</button>
         </form>
+        <div id="thankYouMsg" class="thankyou-card" style="display:none;">
+            <img src="/assets/SS5.png" alt="Diaspora Connect Logo" style="display:block;margin:0 auto 2rem auto;max-width:180px;width:40vw;">
+            <h2 style="font-size:2.2rem;color:#2b1055;font-weight:900;margin-bottom:1.2rem;">Thank you for your request!</h2>
+            <p style="font-size:1.25rem;color:#00695c;font-weight:600;">We have received your details and will reach out to you in a few minutes.</p>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Diaspora Connect. All rights reserved.</p>
     </footer>
     <script>
-    document.getElementById('airportTransferForm').addEventListener('submit', async function(e) {
+    document.getElementById('assignmentForm').addEventListener('submit', async function(e) {
         e.preventDefault();
         const form = e.target;
         const thankYou = document.getElementById('thankYouMsg');
