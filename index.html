@@ -1,1 +1,328 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diaspora Connect</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <style>
+        body {
+            background: none;
+            background-color: #f8f6f2;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 0;
+            background: url('assets/KE_ART_1.png') top center/cover no-repeat;
+            filter: blur(8px) brightness(0.85) contrast(1.08);
+            opacity: 0.55;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 0;
+            background: linear-gradient(rgba(233,185,127,0.28), rgba(43,16,85,0.13));
+            pointer-events: none;
+        }
+        .ke-art-float {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            height: 160px;
+            z-index: 2;
+            opacity: 1;
+            pointer-events: none;
+            background: url('assets/KE_ART_3.png') center center/contain no-repeat;
+        }
+        @media (max-width: 700px) {
+            .ke-art-float {
+                width: 48px;
+                height: 48px;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .about-section {
+                padding-top: 3.5rem;
+            }
+        }
+        main, header, footer, .ke-art-float {
+            position: relative;
+            z-index: 2;
+        }
+        .about-section {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo" style="font-size:2.1rem;">
+                <img src="assets/SS2.png" alt="Diaspora Connect Company Logo" height="72" style="height:72px;width:auto;">
+                <span style="font-size:2.2rem;">Diaspora Connect</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 style="font-size:4.5rem;letter-spacing:4px;">Diaspora Connect</h1>
+                <p style="font-size:1.7rem;">Connecting Kenyans in America to Home</p>
+                <p>Your trusted partner for car hire, property, travel, and more in Kenya. Hassle-free. Reliable. Personal.</p>
+                <a href="#services" class="cta-btn">Explore Our Services</a>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section id="services" class="services-section">
+            <h2 class="section-title">Our Premium Services</h2>
+            <div class="services-grid animated">
+                <!-- 2. Legal & Consular Services -->
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Legal Assistance</h3>
+                    <p>Land, inheritance, contracts, immigration, and more.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Document Services</h3>
+                    <p>Passport/ID renewal, attestation, authentication, and dual citizenship.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Consular Support</h3>
+                    <p>Emergency help, evacuation, and consular support for Kenyans abroad.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <!-- 3. Healthcare & Wellness -->
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Telemedicine</h3>
+                    <p>Book virtual doctor consultations for your family in Kenya.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Mental Health Support</h3>
+                    <p>Access counseling and therapy for diaspora and family.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <!-- 4. Education & Schoolwork -->
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Assignments Help</h3>
+                    <p>Get help with your school assignments, homework, and coursework.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Essay Writing</h3>
+                    <p>Professional essay writing and editing for all academic levels.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Online Exam Assistance</h3>
+                    <p>Support for online tests and exams, ensuring academic integrity and success.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Research Projects</h3>
+                    <p>Guidance and support for research projects and proposals.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <!-- 5. Property & Construction -->
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Airbnb Booking</h3>
+                    <p>Book a comfortable Airbnb for your visit, anywhere in Kenya.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <!-- 6. Travel & Relocation -->
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Car Hire</h3>
+                    <p>Hire a car for your stay in Kenya. Wide selection, flexible terms.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Airport Transfers</h3>
+                    <p>Seamless airport pick-up and drop-off for stress-free travel.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Relocation Assistance</h3>
+                    <p>Moving back or visiting? We offer full relocation support.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Event Planning</h3>
+                    <p>Plan and organize events in Kenya, from family to business.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <!-- 7. Business & Job Placement -->
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Business Registration</h3>
+                    <p>Register a business in Kenya from abroad, with full support.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Job Placement</h3>
+                    <p>Find job opportunities in Kenya and abroad, with skills matching.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Mentorship & Networking</h3>
+                    <p>Connect with mentors and professional networks in your field.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <!-- 8. Family & Welfare -->
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Emergency Support</h3>
+                    <p>Bereavement, medical, legal, and urgent family support services.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Philanthropy</h3>
+                    <p>Support local projects, orphanages, and community initiatives.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Elderly Care</h3>
+                    <p>Coordinate care and support for elderly family members in Kenya.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Childcare & Guardianship</h3>
+                    <p>Find trusted childcare and guardianship services for your children.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <!-- 9. Cultural & Social -->
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Community Events</h3>
+                    <p>Join diaspora meetups, cultural festivals, and social gatherings.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Language & Culture</h3>
+                    <p>Learn Kenyan languages and connect with your heritage.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"></div>
+                    <h3>Kenyan Goods</h3>
+                    <p>Order Kenyan food, crafts, and clothing delivered abroad.</p>
+                    <a class="service-btn" href="details-form.html">Request Details</a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about-section">
+            <h2>About Diaspora Connect</h2>
+            <p>We are dedicated to making life easier for Kenyans in America by providing trusted, reliable, and personal services for all your needs back home. Our team is based in both Kenya and the US, ensuring seamless support and communication.</p>
+            <div class="ke-art-float" aria-hidden="true" title="Kenyan Art Floating Decoration"></div>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:diasporaconnect254@gmail.com">diasporaconnect254@gmail.com</a></p>
+        </section>
+        <section id="newsletter" class="newsletter-section">
+            <div class="newsletter-card">
+                <div class="newsletter-icon" aria-hidden="true" style="font-size:2.3rem; text-align:center; margin-bottom:0.5rem;">📧</div>
+                <h2 class="newsletter-title">Subscribe to our Newsletter</h2>
+                <p class="newsletter-desc">Be the first to know about new services, offers, and updates from Diaspora Connect.</p>
+                <form id="newsletterForm" class="newsletter-form" action="https://formspree.io/f/xjkrpvbd" method="POST">
+                    <input type="email" id="newsletterEmail" name="email" required placeholder="Your email address">
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+                <div id="newsletterThankYou" class="newsletter-thankyou" style="display:none;">
+                    <img src="assets/SS5.png" alt="Diaspora Connect Logo" style="display:block;margin:0 auto 2rem auto;max-width:180px;width:40vw;">
+                    <h2 style="font-size:2.2rem;color:#2b1055;font-weight:900;margin-bottom:1.2rem;">Thank you for subscribing!</h2>
+                    <p style="font-size:1.25rem;color:#00695c;font-weight:600;">You'll receive updates about new services, offers, and news from Diaspora Connect.</p>
+                </div>
+            </div>
+        </section>
+        <!-- BBC Radio Player Section -->
+        <section class="bbc-radio-section" style="max-width: 520px; margin: 2.7rem auto 0 auto; background: linear-gradient(135deg, #fff 60%, #f4f6fa 100%); border-radius: 26px; box-shadow: 0 10px 40px rgba(42, 16, 85, 0.13), 0 2px 8px rgba(0,0,0,0.07); padding: 2.2rem 2.2rem 2rem 2.2rem; text-align: center; border: 2.5px solid #ffd700; position: relative; overflow: hidden; transition: box-shadow 0.3s; display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <div style="display:flex;align-items:center;justify-content:center;gap:1rem;margin-bottom:1.2rem;">
+                <span style="font-size:2.2rem;">📻</span>
+                <h2 style="margin:0;color:#2b1055;font-size:1.5rem;font-weight:900;letter-spacing:1.2px;">BBC World Service Radio</h2>
+            </div>
+            <p style="color:#6a82fb;font-weight:600;margin-bottom:1.2rem;">Listen to live global news and analysis from the BBC.</p>
+            <audio controls style="width:100%;border-radius:16px;box-shadow:0 2px 12px rgba(42,16,85,0.10);background:#f9f9f9;outline:none;">
+                <source src="https://stream.live.vc.bbcmedia.co.uk/bbc_world_service" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Diaspora Connect. All rights reserved.</p>
+    </footer>
+    <script src="/js/script.js"></script>
+    <script>
+    document.getElementById('newsletterForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const thankYou = document.getElementById('newsletterThankYou');
+        const data = new FormData(form);
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                form.style.display = 'none';
+                thankYou.style.display = 'block';
+            } else {
+                const errorMsg = document.createElement('div');
+                errorMsg.textContent = 'Sorry, there was a problem subscribing. Please try again.';
+                errorMsg.style.color = '#d32f2f';
+                errorMsg.style.marginTop = '1rem';
+                form.appendChild(errorMsg);
+            }
+        } catch (err) {
+            const errorMsg = document.createElement('div');
+            errorMsg.textContent = 'Network error. Please check your connection and try again.';
+            errorMsg.style.color = '#d32f2f';
+            errorMsg.style.marginTop = '1rem';
+            form.appendChild(errorMsg);
+        }
+    });
+    </script>
+</body>
+</html> 
