@@ -13,6 +13,14 @@
         <h1>Request House Purchase</h1>
     </header>
     <main>
+        <section class="service-briefing" style="max-width:480px;margin:2.5rem auto 1.2rem auto;padding:1.2rem 1.2rem 1rem 1.2rem;background:#f7f9fa;border-radius:14px;box-shadow:0 2px 12px rgba(42,16,85,0.07);color:#2b1055;font-size:1.08rem;">
+            <h2 style="font-size:1.25rem;margin-bottom:0.5rem;color:#00695c;">House Purchase Briefing</h2>
+            <ul style="margin:0 0 0.5rem 1.2rem;padding:0;">
+                <li>Get help purchasing a house in Kenya, whether for living, investment, or family.</li>
+                <li>Specify your preferred location, budget, and type of house (apartment, bungalow, etc.).</li>
+                <li>Tips: Be specific about your needs, mention preferred locations, and attach reference images if any.</li>
+            </ul>
+        </section>
         <form class="service-form" id="housePurchaseForm">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required>
@@ -22,27 +30,6 @@
 
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" required>
-
-            <div class="contact-method-group">
-                <span class="contact-method-label">How would you like us to contact you?</span>
-                <div class="radio-options">
-                    <label class="radio-option">
-                        <input type="radio" name="contact_method" value="Email" required>
-                        <span class="custom-radio"></span>
-                        Email
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="contact_method" value="Phone" required>
-                        <span class="custom-radio"></span>
-                        Phone
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="contact_method" value="Either" required>
-                        <span class="custom-radio"></span>
-                        Either
-                    </label>
-                </div>
-            </div>
 
             <label for="location">Preferred Location</label>
             <input type="text" id="location" name="location" placeholder="e.g. Nairobi, Mombasa" required>

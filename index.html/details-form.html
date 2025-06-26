@@ -13,7 +13,15 @@
         <h1>Service Request Details</h1>
     </header>
     <main>
-        <form class="service-form" id="detailsForm" action="https://formspree.io/f/xjkrpvbd" method="POST">
+        <section class="service-briefing" style="max-width:480px;margin:2.5rem auto 1.2rem auto;padding:1.2rem 1.2rem 1rem 1.2rem;background:#f7f9fa;border-radius:14px;box-shadow:0 2px 12px rgba(42,16,85,0.07);color:#2b1055;font-size:1.08rem;">
+            <h2 style="font-size:1.25rem;margin-bottom:0.5rem;color:#00695c;">Service Request Briefing</h2>
+            <ul style="margin:0 0 0.5rem 1.2rem;padding:0;">
+                <li>Request any service offered by Diaspora Connect, including legal, consular, document, or other support.</li>
+                <li>Specify the type of service, provide all relevant details, and mention urgency or deadlines.</li>
+                <li>Tips: Be specific, attach documents if needed, and mention any preferences or special instructions.</li>
+            </ul>
+        </section>
+        <form class="service-form" id="detailsForm" action="https://formspree.io/f/xjkrpvbd" method="POST" enctype="multipart/form-data">
             <p style="margin-bottom:1.2rem;">Please fill in your contact details and describe your request. We will reach out to you in a few minutes.</p>
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required>
@@ -23,27 +31,6 @@
 
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" required>
-
-            <div class="contact-method-group">
-                <span class="contact-method-label">How would you like us to contact you?</span>
-                <div class="radio-options">
-                    <label class="radio-option">
-                        <input type="radio" name="contact_method" value="Email" required>
-                        <span class="custom-radio"></span>
-                        Email
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="contact_method" value="Phone" required>
-                        <span class="custom-radio"></span>
-                        Phone
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="contact_method" value="Either" required>
-                        <span class="custom-radio"></span>
-                        Either
-                    </label>
-                </div>
-            </div>
 
             <label for="message">How can we help you?</label>
             <textarea id="message" name="message" rows="4" placeholder="Describe your needs or the service you want..."></textarea>
