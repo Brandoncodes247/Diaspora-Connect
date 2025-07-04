@@ -725,4 +725,56 @@ footer {
     margin-top: 0.7rem;
     padding: 0.4rem 0.1rem;
   }
+}
+
+/* Make the services section intro more visible */
+#services .section-title {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.13);
+}
+#services .services-intro {
+  background: rgba(255,255,255,0.85);
+  border-radius: 18px;
+  padding: 1.2rem 2.2rem;
+  margin: 0 auto 2.2rem auto;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(42,16,85,0.10);
+  font-size: 1.2rem;
+  color: #2b1055;
+  position: relative;
+  z-index: 2;
+}
+#services .services-intro {
+  text-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 700px) {
+  #services .services-intro {
+    padding: 0.8rem 0.7rem;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    max-width: 98vw;
+  }
+  .services-section {
+    padding: 0 0.3rem;
+  }
+  .services-grid {
+    gap: 1.2rem;
+  }
+  .service-card {
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+}
+@media (max-width: 400px) {
+  #services .services-intro {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.2rem;
+    border-radius: 10px;
+  }
+  .service-card {
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+    border-radius: 10px;
+  }
 } 
